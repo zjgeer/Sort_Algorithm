@@ -1,5 +1,5 @@
-// suanfa1.cpp : Defines the entry point for the console application.
-//
+// SortAlgroithm: Defines the entry point for the console application.
+// sort algroithm : 冒泡排序，简单选择排序，直接插入排序，希尔排序，堆排序，归并排序，快速排序
 #include "stdafx.h"
 
 #include "stdlib.h"
@@ -31,7 +31,7 @@ int myrand()
 }
 
 
-
+/* 最易想到的冒泡排序算法 */
 void BubbleSort0(sqList *L)
 {
 	int i,j;
