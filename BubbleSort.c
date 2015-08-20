@@ -1,14 +1,12 @@
 // SortAlgroithm: Defines the entry point for the console application.
 // sort algroithm : 冒泡排序，简单选择排序，直接插入排序，希尔排序，堆排序，归并排序，快速排序
-#include "stdafx.h"
-
-#include "stdlib.h"
-#include "stdio.h"
-#include "time.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 
 /* 用于排序数组个数最大值，可以根据需要修改 */
-#define MAXSIZE 1000
+#define MAXSIZE 10
 /* 排序数据的结构体 */
 typedef struct
 {
