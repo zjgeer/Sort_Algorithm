@@ -1,17 +1,17 @@
 // SortAlgroithm: Defines the entry point for the console application.
-// sort algroithm : Ã°ÅİÅÅĞò£¬¼òµ¥Ñ¡ÔñÅÅĞò£¬Ö±½Ó²åÈëÅÅĞò£¬Ï£¶ûÅÅĞò£¬¶ÑÅÅĞò£¬¹é²¢ÅÅĞò£¬¿ìËÙÅÅĞò
+// sort algroithm : å†’æ³¡æ’åºï¼Œç®€å•é€‰æ‹©æ’åºï¼Œç›´æ¥æ’å…¥æ’åºï¼Œå¸Œå°”æ’åºï¼Œå †æ’åºï¼Œå½’å¹¶æ’åºï¼Œå¿«é€Ÿæ’åº
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
 
 
-/* ÓÃÓÚÅÅĞòÊı×é¸öÊı×î´óÖµ£¬¿ÉÒÔ¸ù¾İĞèÒªĞŞ¸Ä */
+/* ç”¨äºæ’åºæ•°ç»„ä¸ªæ•°æœ€å¤§å€¼ï¼Œå¯ä»¥æ ¹æ®éœ€è¦ä¿®æ”¹ */
 #define MAXSIZE 10
-/* ÅÅĞòÊı¾İµÄ½á¹¹Ìå */
+/* æ’åºæ•°æ®çš„ç»“æ„ä½“ */
 typedef struct
 {
-	int r[MAXSIZE + 1];	/* ´æ´¢ÅÅĞòÊı×é */
-	int length;			/* ÓÃÓÚ¼ÇÂ¼Ë³Ğò±íµÄ³¤¶È */
+	int r[MAXSIZE + 1];	/* å­˜å‚¨æ’åºæ•°ç»„ */
+	int length;			/* ç”¨äºè®°å½•é¡ºåºè¡¨çš„é•¿åº¦ */
 }sqList;
 
 void swap(sqList *L,int i,int j)
@@ -24,12 +24,12 @@ void swap(sqList *L,int i,int j)
 
 int myrand()
 {
-	srand( (unsigned)time( NULL ) ); /*½«µ±Ç°Ê±¼äÉèÖÃ³ÉËæ»úº¯ÊıµÄÖÖ×Ó£¬ËùÒÔÃ¿´Î²úÉúµÄÊı¶¼²»Ò»Ñù*/
+	srand( (unsigned)time( NULL ) ); /*å°†å½“å‰æ—¶é—´è®¾ç½®æˆéšæœºå‡½æ•°çš„ç§å­ï¼Œæ‰€ä»¥æ¯æ¬¡äº§ç”Ÿçš„æ•°éƒ½ä¸ä¸€æ ·*/
 	return rand();
 }
 
 
-/* ×îÒ×Ïëµ½µÄÃ°ÅİÅÅĞòËã·¨ */
+/* æœ€æ˜“æƒ³åˆ°çš„å†’æ³¡æ’åºç®—æ³• */
 void BubbleSort0(sqList *L)
 {
 	int i,j;
@@ -99,12 +99,12 @@ void SelectSort(sqList *L)
 	printf("\nThe SelectSort swap counter is %f.\n",swCounter);
 }
 
-//Ã°ÅİÅÅĞòµÄÁ½¸ö·½·¨
+//å†’æ³¡æ’åºçš„ä¸¤ä¸ªæ–¹æ³•
 
 int main(int argc, char* argv[])
 {
 	int counter;
-	srand( (unsigned)time( NULL ) ); /*½«µ±Ç°Ê±¼äÉèÖÃ³ÉËæ»úº¯ÊıµÄÖÖ×Ó£¬ËùÒÔÃ¿´Î²úÉúµÄÊı¶¼²»Ò»Ñù*/
+	srand( (unsigned)time( NULL ) ); /*å°†å½“å‰æ—¶é—´è®¾ç½®æˆéšæœºå‡½æ•°çš„ç§å­ï¼Œæ‰€ä»¥æ¯æ¬¡äº§ç”Ÿçš„æ•°éƒ½ä¸ä¸€æ ·*/
 	sqList mysqList,mysqList1;
 	
 	mysqList.length = MAXSIZE;
