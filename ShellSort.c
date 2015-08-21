@@ -14,7 +14,6 @@ void ShellSort(sqList *L)
 {
 	int i,j;
 	int increment = L->length;
-	
 	do
 	{
 		/* 增量序列 */
@@ -44,11 +43,12 @@ int main(int argc,char *argv[])
 	
 	srand((unsigned)time(NULL));
 	
-	myList.length = MAXSIZE -1;
+	myList.length = MAXSIZE - 1;
 	myList.r[0] = 0;
-	for(i = 1;i <＝ myList.length;i++)
+
+	for(i = 1;i <= myList.length;i++)
 	{
-		myList.r[i] = rand() % 10;
+		myList.r[i] = rand() % 100;
 	}
 	
 	ShellSort(&myList);

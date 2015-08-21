@@ -21,4 +21,4 @@ ShellSort.o: ShellSort.c
 	$(CC) $(CFLAGS) -c ShellSort.c	
 
 clean:
-	rm -rf *.o BubbleSort SelectSort StraightInsertSort *~
+	rm -rf *.o BubbleSort SelectSort StraightInsertSort ShellSort *~
