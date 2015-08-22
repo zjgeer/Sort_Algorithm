@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAXSIZE 10
+#define MAXSIZE 20
 
 typedef struct
 {
@@ -13,36 +13,28 @@ typedef struct
 /* 将有序的SR[i..m]和SR[m+1..n]归并为有序的TR[i..n] */
 void Merge(int SR[],int TR[],int i,int m,int n)
 {
-	int j,k,l;
+	int j,k;
 	/* 将SR中记录由小到大归并入TR */
 	for(j = m + 1,k = i;i <= m && j <= n;k++)
 	{
 		if(SR[i] < SR[j])
 		{
 			TR[k] = SR[i++];
-//i++;
 		}
 		else
 		{
 			TR[k] = SR[j++];
-			//j++;
 		}
 	}
 	/* 判断如果序列的前半部分是否排完 */
  	if(i <= m)
 	{
-		for(l = 0;l <= m - i;l++)
-		{
-			TR[k + 1] = SR[i + 1];		/* 将剩余的序列复制到TR中 */
-		}
+		TR[k++] = SR[i++];		/* 将剩余的序列复制到TR中 */
 	} 
 	/* 判断如果序列的后半部分是否排完*/	
  	if(j <= n)
 	{
-		for(l = 0;l <= n - j;l++)
-		{
-			TR[k + 1] = SR[j + 1];		/* 将剩余的序列复制到TR中 */
-		}
+		TR[k++] = SR[j++];		/* 将剩余的序列复制到TR中 */
 	} 
 }
 
@@ -74,7 +66,7 @@ void MergeSort(sqList *L)
 	MSort(L->r,L->r,1,L->length);
 }
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 	sqList myList;
