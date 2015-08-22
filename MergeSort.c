@@ -27,12 +27,12 @@ void Merge(int SR[],int TR[],int i,int m,int n)
 		}
 	}
 	/* 判断如果序列的前半部分是否排完 */
- 	if(i <= m)
+ 	while(i <= m)
 	{
 		TR[k++] = SR[i++];		/* 将剩余的序列复制到TR中 */
 	} 
 	/* 判断如果序列的后半部分是否排完*/	
- 	if(j <= n)
+ 	while(j <= n)
 	{
 		TR[k++] = SR[j++];		/* 将剩余的序列复制到TR中 */
 	} 
