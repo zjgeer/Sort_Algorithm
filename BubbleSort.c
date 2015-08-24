@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <time.h>
 
-
 /* 用于排序数组个数最大值，可以根据需要修改 */
 #define MAXSIZE 10
 /* 排序数据的结构体 */
